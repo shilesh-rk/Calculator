@@ -1,0 +1,227 @@
+/* ===========This is compiled file of sccs======== */
+
+:root {
+  --screen :rgba(64, 185, 37, 0.411);
+  --body-bg:linear-gradient(115deg,rgba(236, 153, 16, 0.8),rgba(58, 68, 130, 0.8));
+  --operator-bg: rgb(246,153,6);
+  --op-width:40%;
+  --op-radius: 20px;
+  --num-bg:rgba(13, 13, 189, 0.766);
+  --special-op-bgc:rgba(22, 208, 81, 0.766);
+}
+
+
+body{
+  background-image: url(https://img.freepik.com/free-vector/maths-chalkboard_23-2148178219.jpg?size=626&ext=jpg);
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: var(--body-bg)
+}
+.container {
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 360px;
+    font-size: 30px;
+    background-color: white;
+    border-radius: var(--op-radius);
+    box-shadow: inset 0px 0px 30px 6px rgba(0, 0, 0, 0.615);
+    transition: all 1s ease;
+    animation: Zoom 1.7s infinite;
+  }
+
+  @keyframes Zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    }
+    100% {
+      transform: scale(1);
+    }
+    
+  }
+  .container:hover {
+    animation: none;
+  }
+  .container .input-field {
+    margin: 0px 20px;
+    
+  }
+  .container .input-field input{
+    margin-top: 30px;
+    height: 60px;
+    width: 100%;
+    background-color: var(--screen);
+    color: rgba(1, 1, 1, 0.625);
+    font-weight: 800;
+    font-size: 25px;
+    text-align: end;
+    border: none;
+    box-shadow: inset 4px 4px 1px 0px rgba(27, 26, 26, 0.493);
+  }
+  .container .input-field #output{
+    margin-top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: var(--screen);
+    color: rgba(1, 1, 1, 0.468);
+    font-weight: 800;
+    font-size: 25px;
+    text-align: end;
+    border: none;
+    transition: all .3s ease-in-out;
+    box-shadow: inset 4px -0.7px 0px 0px rgba(27, 26, 26, 0.493);
+  }
+
+  .container .input-field input:focus {
+    outline: none;
+  }
+  .container #ac {
+    font-size: 20px;
+    margin-top: -5px;
+    height: 29px;
+    border-radius: var(--op-radius);
+    width: 50px;
+    margin-left: -10px;
+    margin-right: 110px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .container #ac:hover {
+    opacity: 1;
+    color:red;
+  }
+
+.container #del {
+    opacity: .5;
+    font-size: 25px;
+    margin-left: 110px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  #del:hover{
+    opacity: 1;
+  }
+  .container .ac-line {
+    display: flex;
+    justify-content: center;
+  }
+  .container .ac-line :nth-child(5) {
+    background-color: var(--operator-bg);
+    color: black;
+    width: var(--op-width);
+    border-radius: var(--op-radius);
+  }
+  .container .ac-line :nth-child(3){
+    background-color: var(--operator-bg);
+    color: black;
+  }
+  .container .ac-line :nth-child(4){
+    background-color: var(--operator-bg);
+    color: black;
+  }
+  .container .mul-line {
+    display: flex;
+    justify-content: center;
+  }
+  .container .mul-line :nth-child(4) {
+    background-color: var(--operator-bg);
+    color: black;
+    width: var(--op-width);
+    border-radius: var(--op-radius);
+  }
+  .container .minus-line {
+    display: flex;
+    justify-content: center;
+  }
+  .container .minus-line :nth-child(4) {
+    background-color: var(--operator-bg);
+    color: black;
+    width: var(--op-width);
+    border-radius: var(--op-radius);
+  }
+  .container .plus-line {
+    display: flex;
+    justify-content: center;
+  }
+  .container .plus-line :nth-child(4) {
+    background-color: var(--operator-bg);
+    color: black;
+    width: var(--op-width);
+    border-radius: var(--op-radius);
+  }
+  .container .zero-line {
+    display: flex;
+    justify-content: center;
+  }
+  .container .zero-line :nth-child(3) {
+    
+    background-color: var(--operator-bg);
+    color: black;
+    width: 57.6%;
+    border-radius: 30px;
+  }
+  .container .zero-line :nth-child(2){
+    
+    background-color: var(--special-op-bgc);
+    color: black;
+  }
+  .container .zero-line :nth-child(2):hover{
+    box-shadow: -1px -1px 1px 1px rgba(1, 10, 0, 0.845);
+  }
+  .container .btn {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px;
+    color: rgba(225, 216, 216, 0.866);
+    background-color: var(--num-bg);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  .container .btn-op {
+    background-color:var(--special-op-bgc);
+    color: black;
+  }
+  .num-system {
+    margin-top: -20px;
+    padding: 10px;
+  }
+  
+  .container hr {
+    border: 0.01rem solid rgba(0, 0, 0, 0.41);
+    margin-top: 0px;
+   width: 80%;
+  }/*# sourceMappingURL=cal .css.map */
+
+  .container .btn {
+    box-shadow: 0px 0px 2px 2px gray;
+  }
+  .container .btn:hover {
+    font-size: 21px;
+    box-shadow: -1px -1px 1px 1px rgba(32, 32, 32, 0.779);
+  }
+
+
+  /* #num1,#num2,#num3,#num4,#num6,#num7,#num8,#num9 {
+    /* box-shadow: -1px -1px 1px 1px rgba(13, 105, 136, 0.779); */
+
+  .container input[id*=num]:hover{
+    box-shadow: -1px -1px 1px 1px rgba(1, 10, 0, 0.845);
+  }
+
+
+
+  /* ==========ByShileshRk=========== */

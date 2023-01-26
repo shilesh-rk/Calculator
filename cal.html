@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="cal .scss"> -->
+        <title>Calculator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="cal.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="container">
+
+
+                <!-- =====Screen====== -->
+
+
+                <div class="input-field">
+                    <input type="text" id="input" placeholder="0" disabled>
+                    <input type="text" id="output" placeholder="shilesh_rk" disabled >
+                </div>
+                
+                <i class="fas fa-redo-alt" id="ac" onclick="cls()"></i>
+                <i class="fas fa-backspace" onclick="del()" id="del"></i> <hr>
+
+                <!-- =====buttons====== -->
+
+                <div class="num-system">
+                    <div class="ac-line">
+                        <input type="button" class="btn btn-op" id="paranthesis1" onclick="display('*(')" value="(">
+                        <input type="button" class="btn btn-op" id="paranthesis" onclick="display(')')" value=")">
+                        <input type="button" class="btn" id="remainder" onclick="display('%')" value="%">
+                        <input type="button"class="btn"  id="pow" onclick="display('**')" value="^">
+                        <input type="button" class="btn" id="divide" onclick="display('/')" value="/">
+                    </div>
+                    <div class="mul-line">
+                        <input type="button" class="btn" id="num7" onclick="display('7')" value="7">
+                        <input type="button" class="btn" id="num8" onclick="display('8')" value="8">
+                        <input type="button" class="btn" id="num9" onclick="display('9')" value="9">
+                        <input type="button" class="btn" id="mul" onclick="display('*')" value="x">
+                    </div>
+                    <div class="minus-line">
+                        <input type="button" class="btn" id="num4" onclick="display('4')" value="4">
+                        <input type="button" class="btn" id="num5" onclick="display('5')" value="5">
+                        <input type="button" class="btn" id="num6" onclick="display('6')" value="6">
+                        <input type="button" class="btn" id="minus" onclick="display('-')" value="-">
+                    </div>
+                    <div class="plus-line">
+                        <input type="button" class="btn" id="num1" onclick="display('1')" value="1">
+                        <input type="button" class="btn" id="num2" onclick="display('2')" value="2">
+                        <input type="button" class="btn" id="num3" onclick="display('3')" value="3">
+                        <input type="button" class="btn" id="plus" onclick="display('+')" value="+">
+                    </div>
+                    <div class="zero-line">
+                        <input type="button" class="btn" id="zero" onclick="display('0')" value="0">
+                        <input type="button" class="btn" id="point" onclick="display('.')" value=".">
+                        <input type="button" id="equal" class="btn" onclick="result()" value="=">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- ======Javascript======== -->
+
+        <!-- ==========ByShileshRk======== -->
+        
+        <script src="cal.js"></script>
+    </body>
+</html>
